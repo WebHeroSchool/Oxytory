@@ -1,3 +1,45 @@
 .section__title {
 	font-family: 'Roboto', sans-serif;
 }
+
+body {
+	margin: 0;
+}
+
+.section {
+	border: dashed 1px red;
+}
+
+.wrapper	{
+	width: 80%;
+	margin: auto;
+	border: dashed 1px red
+}
+
+.header 	{
+	border: dashed 1px red;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo 	{
+	margin-right: 63%;
+	padding: 40px 0;
+	border: dashed 1px red;
+}
+
+.menu {
+ 	display: flex;
+ 	align-items: center;
+ 	border: dashed 1px red;
+}
+
+.menu__item	{
+	padding: 13px;
+	border: dashed 1px red;
+	align-content: center;
+}
+
+.menu__item:last-child {
+	padding-right: 0;
+}
