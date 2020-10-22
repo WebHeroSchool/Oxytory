@@ -15,6 +15,7 @@ body {
 .header 	{
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 100px;
 }
 
 .logo 	{
@@ -86,3 +87,39 @@ body {
 	opacity: 1;
 	width: 100%;
  	}
+
+.main {
+	padding: 0 67% 100px 0;
+	background: top right no-repeat url(img/Frame.svg);
+}
+
+.main__title {
+	font: 700 50px/65px pt_serif, arial, helvetica; sans-serif;
+	margin: 0 0 40px 0;
+}
+
+.main__description {
+	font: 500 22px/25px Roboto, arial, helvetica, sans-serif;
+	margin: 0 0 41px 0;
+}
+
+.main__title_light-blue {
+	background-color: #ECF3FF;
+}
+
+.main__button {
+	display: inline-block;
+	padding: 14px 16px;
+	background-color: #0056EC;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	font: 500 14px/16px roboto, arial, helvetica, sans-serif;
+	opacity: 1;
+	transition: opacity .5s font-weight .5s;
+}
+
+.main__button:hover {
+	opacity: 50%;
+	font-weight: 600;
+}
