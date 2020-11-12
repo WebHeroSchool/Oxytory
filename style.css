@@ -87,7 +87,7 @@ body {
  	}
 
 .main {
-	padding: 0 62% 200px 0;
+	padding: 0 65% 15% 0;
 	background: top right no-repeat url(img/Frame.svg);
 }
 
@@ -97,8 +97,9 @@ body {
 }
 
 .main__description {
-	font: 400 22px/26px Roboto, arial, helvetica, sans-serif;
+	font: 500 22px/26px Roboto, arial, helvetica, sans-serif;
 	margin: 0 0 41px 0;
+	padding: 0 20% 0 0;
 }
 
 .main__title_light-blue {
@@ -107,7 +108,7 @@ body {
 
 .main__button {
 	display: inline-block;
-	padding: 18px 21px;
+	padding: 16px 22px;
 	background-color: #0056EC;
 	color: #fff;
 	text-decoration: none;
@@ -129,46 +130,118 @@ body {
 #checkbox {
 	  display: none;
 	}
+@media (max-width: 1500px) {
+	.wrapper {
+		width: 67%;
+	}
+	.menu__item	{
+	align-content: center;
+	font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+ 	margin-right: 26px;
+ 	padding-top: 7px;
+ }
 
-@media (max-width: 768px) {
+	.main {
+		background-size: 60%;
+		padding: 0 58% 25% 0;
+	}
+	.header {
+		margin-bottom: 100px;
+	}
+	.main__title {
+		font: 50px/66px pt_serifbold, arial, helvetica; sans-serif;
+		max-resolution: 44px;
+		width: 38vw;
+	}
+
+	.main__description {
+		font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+		margin-bottom: 41px;
+		padding: 0;
+	}
+	.main__button {
+		display: inline-block;
+		padding: 14px 20px;
+		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+		opacity: 1;
+		transition: opacity .5s font-weight .5s;
+	}
+
+	.main__button:hover {
+		opacity: 50%;
+		font-weight: 600;
+	}
+
+	.wrapper {
+		width: 67%;
+		margin: auto;
+	}
+}
+
+@media (max-width: 1310px) {
+
+	.wrapper {
+		width: 91%;
+	}
+	.header {
+		margin-bottom: 100px;
+	}
+	.main {
+		background-size: 60%;
+	}
+}
+
+@media (max-width: 716px) {
+	.wrapper {
+		width: 87%;
+		margin: auto;
+	}
 	.menu {
 		display: none;
 		/*position: absolute;*/
 	}
 	.header {
-		margin-bottom: 28px;
+		margin-bottom: 14px;
 		justify-content: space-between;
 	}
 	.main {
-		background-size: 74%;
+		background-size: 81%;
 		background-position: top center;
-		padding: 74% 0 0;
+		padding: 78% 0 0 0;
 		text-align: center;
+		justify-content: center;
 	}
 	.main__title {
 		font: 30px/39px pt_serifbold, arial, helvetica; sans-serif;
 		max-resolution: 44px;
-		}
+		margin-bottom: 34px;
+		padding: 0;
+		width: 100%;
+	}		
+
 	.main__description {
-		font: 500 16px/18px Roboto, arial, helvetica, sans-serif;
+		font: 500 16px/19px Roboto, arial, helvetica, sans-serif;
 		margin-bottom: 25px;
+		padding: 0 11%;
 	}
 	.main__button {
 		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+		padding: 16px 22px;
 	}
 	.logo__text {
 		display: none;
 	}
 
 	#checkbox:checked ~.menu__box {
-	  width: 80%;
+	  width: 87%;
 	  height: 80%;
 	  background: #fff;
 	  display: block;
+	  position: absolute;
 	}
 
 	.burger {
-		padding: 35px 30px 0 0;
+		padding: 40px 24px 0 0;
 		position: relative;
 		cursor: pointer;
 		z-index: 1;
@@ -184,7 +257,7 @@ body {
 	.burger__line::before {
 		content:'';
 		background: #0056EC;
-		top: -5px;
+		top: -7px;
 		width: 25px;
 		height: 3px;
 		position: absolute;
@@ -193,7 +266,7 @@ body {
 	.burger__line::after {
 		content:'';
 		background: #0056EC;
-		top: 5px;
+		top: 7px;
 		width: 25px;
 		height: 3px;
 		position: absolute;
@@ -201,10 +274,9 @@ body {
 
 	.menu__box {
 		position: absolute;
-		padding: 0;
+		padding: 169px 0 0 0;
 		list-style: none;
   	text-align: center;
-  	padding-top: 186px;
   }
 
 	.menu__item	{
@@ -213,8 +285,9 @@ body {
 		color:#000;
 	 	text-decoration: none;
 	 	position: relative;
-	 	margin-bottom: 24px;
+	 	margin-bottom: 22px;
 	 	font: 500 30px/35px Roboto, arial, helvetica; sans-serif;
+	 	padding: 0;
 	}
 
   .menu__item:after {
@@ -229,17 +302,19 @@ body {
 		position: sticky;
 	}
 
-	#checkbox:checked ~ .burger__line {
+	#checkbox:checked ~ label > .burger > .burger__line {
 		background-color: transparent;
 	}
 
-	#checkbox:checked ~ .burger__line::after {
+	#checkbox:checked ~ label > .burger > .burger__line::after {
 		transform: rotate(45deg);
 		top: 0;
 	}
 
-	#checkbox:checked ~ .burger__line::before {
+	#checkbox:checked ~ label > .burger > .burger__line::before {
 		transform: rotate(-45deg);
 		top: 0;
 	}
 }
+
+
