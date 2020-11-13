@@ -97,7 +97,7 @@ body {
 }
 
 .main__description {
-	font: 500 22px/26px Roboto, arial, helvetica, sans-serif;
+	font: 400 22px/26px Roboto, arial, helvetica, sans-serif;
 	margin: 0 0 41px 0;
 	padding: 0 20% 0 0;
 }
@@ -238,7 +238,23 @@ body {
 	  background: #fff;
 	  display: block;
 	  position: absolute;
+	  animation: move 1s ease-in-out;
 	}
+
+	@keyframes move {
+		from {
+			transform: translateX(200%);
+		}
+
+		50% {
+			transform: translateX(100%);
+		}
+
+		100% {
+			transform: translateX(0);
+		}
+	}
+
 
 	.burger {
 		padding: 40px 24px 0 0;
@@ -261,6 +277,7 @@ body {
 		width: 25px;
 		height: 3px;
 		position: absolute;
+		transition: transform .2s ease-in, top .2s linear .2s;
 	}
 
 	.burger__line::after {
@@ -270,6 +287,7 @@ body {
 		width: 25px;
 		height: 3px;
 		position: absolute;
+		transition: transform .2s ease-in, top .2s linear .2s;
 	}
 
 	.menu__box {
@@ -302,18 +320,22 @@ body {
 		position: sticky;
 	}
 
+
 	#checkbox:checked ~ label > .burger > .burger__line {
 		background-color: transparent;
 	}
 
 	#checkbox:checked ~ label > .burger > .burger__line::after {
-		transform: rotate(45deg);
 		top: 0;
+		transform: rotate(-45deg);
+		transition: top .2s linear, transform .2s ease-in .2s
 	}
 
 	#checkbox:checked ~ label > .burger > .burger__line::before {
-		transform: rotate(-45deg);
 		top: 0;
+		transform: rotate(45deg);
+		/*transition: transform .2s ease-in, top .2s linear .2s;*/
+		transition: top .2s linear, transform .2s ease-in .2s
 	}
 }
 
