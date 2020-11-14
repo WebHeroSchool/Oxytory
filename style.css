@@ -92,12 +92,12 @@ body {
 }
 
 .main__title {
-	font: 700 66px/87px pt_serifbold, arial, helvetica; sans-serif;
+	font: 700 66px/87px pt_serifbold, arial, helvetica, sans-serif;
 	margin: 0 0 40px 0;
 }
 
 .main__description {
-	font: 500 22px/26px Roboto, arial, helvetica, sans-serif;
+	font: 400 22px/26px Roboto, arial, helvetica, sans-serif;
 	margin: 0 0 41px 0;
 	padding: 0 20% 0 0;
 }
@@ -115,7 +115,7 @@ body {
 	border-radius: 4px;
 	font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
 	opacity: 1;
-	transition: opacity .5s font-weight .5s;
+	transition: opacity .2s, font-weight .2s;
 }
 
 .main__button:hover {
@@ -149,8 +149,7 @@ body {
 		margin-bottom: 100px;
 	}
 	.main__title {
-		font: 50px/66px pt_serifbold, arial, helvetica; sans-serif;
-		max-resolution: 44px;
+		font: 50px/66px pt_serifbold, arial, helvetica, sans-serif;
 		width: 38vw;
 	}
 
@@ -163,8 +162,6 @@ body {
 		display: inline-block;
 		padding: 14px 20px;
 		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
-		opacity: 1;
-		transition: opacity .5s font-weight .5s;
 	}
 
 	.main__button:hover {
@@ -212,8 +209,7 @@ body {
 		justify-content: center;
 	}
 	.main__title {
-		font: 30px/39px pt_serifbold, arial, helvetica; sans-serif;
-		max-resolution: 44px;
+		font: 30px/39px pt_serifbold, arial, helvetica, sans-serif;
 		margin-bottom: 34px;
 		padding: 0;
 		width: 100%;
@@ -238,6 +234,21 @@ body {
 	  background: #fff;
 	  display: block;
 	  position: absolute;
+	  animation: move 1s ease-in-out;
+	}
+
+	@keyframes move {
+		from {
+			transform: translateX(200%);
+		}
+
+		50% {
+			transform: translateX(100%);
+		}
+
+		100% {
+			transform: translateX(0);
+		}
 	}
 
 	.burger {
@@ -261,6 +272,7 @@ body {
 		width: 25px;
 		height: 3px;
 		position: absolute;
+		transition: transform .2s ease-in, top .2s linear .2s;
 	}
 
 	.burger__line::after {
@@ -270,6 +282,7 @@ body {
 		width: 25px;
 		height: 3px;
 		position: absolute;
+		transition: transform .2s ease-in, top .2s linear .2s;
 	}
 
 	.menu__box {
@@ -286,7 +299,7 @@ body {
 	 	text-decoration: none;
 	 	position: relative;
 	 	margin-bottom: 22px;
-	 	font: 500 30px/35px Roboto, arial, helvetica; sans-serif;
+	 	font: 500 30px/35px Roboto, arial, helvetica, sans-serif;
 	 	padding: 0;
 	}
 
@@ -299,21 +312,24 @@ body {
 		opacity: 0;
 		transition: opacity .5s, width .5s;
 		align-content: center;
-		position: sticky;
 	}
+
 
 	#checkbox:checked ~ label > .burger > .burger__line {
 		background-color: transparent;
 	}
 
 	#checkbox:checked ~ label > .burger > .burger__line::after {
-		transform: rotate(45deg);
 		top: 0;
+		transform: rotate(-45deg);
+		transition: top .2s linear, transform .2s ease-in .2s
 	}
 
 	#checkbox:checked ~ label > .burger > .burger__line::before {
-		transform: rotate(-45deg);
 		top: 0;
+		transform: rotate(45deg);
+		/*transition: transform .2s ease-in, top .2s linear .2s;*/
+		transition: top .2s linear, transform .2s ease-in .2s
 	}
 }
 
