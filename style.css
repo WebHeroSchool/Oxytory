@@ -92,7 +92,7 @@ body {
 }
 
 .main__title {
-	font: 700 66px/87px pt_serifbold, arial, helvetica; sans-serif;
+	font: 700 66px/87px pt_serifbold, arial, helvetica, sans-serif;
 	margin: 0 0 40px 0;
 }
 
@@ -115,7 +115,7 @@ body {
 	border-radius: 4px;
 	font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
 	opacity: 1;
-	transition: opacity .5s font-weight .5s;
+	transition: opacity .2s, font-weight .2s;
 }
 
 .main__button:hover {
@@ -149,8 +149,7 @@ body {
 		margin-bottom: 100px;
 	}
 	.main__title {
-		font: 50px/66px pt_serifbold, arial, helvetica; sans-serif;
-		max-resolution: 44px;
+		font: 50px/66px pt_serifbold, arial, helvetica, sans-serif;
 		width: 38vw;
 	}
 
@@ -163,8 +162,6 @@ body {
 		display: inline-block;
 		padding: 14px 20px;
 		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
-		opacity: 1;
-		transition: opacity .5s font-weight .5s;
 	}
 
 	.main__button:hover {
@@ -212,8 +209,7 @@ body {
 		justify-content: center;
 	}
 	.main__title {
-		font: 30px/39px pt_serifbold, arial, helvetica; sans-serif;
-		max-resolution: 44px;
+		font: 30px/39px pt_serifbold, arial, helvetica, sans-serif;
 		margin-bottom: 34px;
 		padding: 0;
 		width: 100%;
@@ -254,7 +250,6 @@ body {
 			transform: translateX(0);
 		}
 	}
-
 
 	.burger {
 		padding: 40px 24px 0 0;
@@ -304,7 +299,7 @@ body {
 	 	text-decoration: none;
 	 	position: relative;
 	 	margin-bottom: 22px;
-	 	font: 500 30px/35px Roboto, arial, helvetica; sans-serif;
+	 	font: 500 30px/35px Roboto, arial, helvetica, sans-serif;
 	 	padding: 0;
 	}
 
@@ -317,7 +312,6 @@ body {
 		opacity: 0;
 		transition: opacity .5s, width .5s;
 		align-content: center;
-		position: sticky;
 	}
 
 
