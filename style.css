@@ -6,7 +6,6 @@ body {
 	margin: 0;
 }
 
-
 .wrapper	{
 	width: 79%;
 	margin: auto;
@@ -128,23 +127,25 @@ body {
 }
 
 #checkbox {
-	  display: none;
-	}
+	display: none;
+}
+
 @media (max-width: 1500px) {
 	.wrapper {
 		width: 67%;
 	}
 	.menu__item	{
-	align-content: center;
-	font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
- 	margin-right: 26px;
- 	padding-top: 7px;
+		align-content: center;
+		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+	 	margin-right: 26px;
+	 	padding-top: 7px;
  }
 
 	.main {
 		background-size: 60%;
 		padding: 0 58% 25% 0;
 	}
+
 	.header {
 		margin-bottom: 100px;
 	}
@@ -195,7 +196,6 @@ body {
 	}
 	.menu {
 		display: none;
-		/*position: absolute;*/
 	}
 	.header {
 		margin-bottom: 14px;
