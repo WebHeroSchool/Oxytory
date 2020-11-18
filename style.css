@@ -6,16 +6,15 @@ body {
 	margin: 0;
 }
 
-
 .wrapper	{
-	width: 79%;
+	width: 79.5%;
 	margin: auto;
 }
 
 .header 	{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 205px;
+	margin-bottom: 132px;
 }
 
 .logo 	{
@@ -50,11 +49,12 @@ body {
 .menu {
  	display: flex;
  	align-items: center;
+ 	padding-right: 10px;
 }
 
 .menu__item	{
 	align-content: center;
-	font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+	font: 600 18px/21px Roboto, arial, helvetica, sans-serif;
  	color:#000;
  	text-decoration: none;
  	position: relative;
@@ -93,7 +93,8 @@ body {
 
 .main__title {
 	font: 700 66px/87px pt_serifbold, arial, helvetica, sans-serif;
-	margin: 0 0 40px 0;
+	margin: 0 0 37px 0;
+	padding-top: 73px;
 }
 
 .main__description {
@@ -108,7 +109,7 @@ body {
 
 .main__button {
 	display: inline-block;
-	padding: 16px 22px;
+	padding: 18px 29px;
 	background-color: #0056EC;
 	color: #fff;
 	text-decoration: none;
@@ -128,50 +129,52 @@ body {
 }
 
 #checkbox {
-	  display: none;
-	}
+	display: none;
+}
+
 @media (max-width: 1500px) {
 	.wrapper {
-		width: 67%;
+		width: 68%;
 	}
 	.menu__item	{
-	align-content: center;
-	font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
- 	margin-right: 26px;
- 	padding-top: 7px;
+		align-content: center;
+		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+	 	margin-right: 26px;
+	 	padding-top: 7px;
  }
 
 	.main {
-		background-size: 60%;
+		background-size: 55%;
 		padding: 0 58% 25% 0;
 	}
+
 	.header {
-		margin-bottom: 100px;
+		margin-bottom: 84px;
 	}
+
+	.menu {
+    padding-right: 6px;
+  }
 	.main__title {
 		font: 50px/66px pt_serifbold, arial, helvetica, sans-serif;
 		width: 38vw;
+		padding-top: 16px;
 	}
 
 	.main__description {
 		font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
-		margin-bottom: 41px;
+		margin-bottom: 43px;
 		padding: 0;
 	}
 	.main__button {
 		display: inline-block;
-		padding: 14px 20px;
+		padding: 14px 22px;
 		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
 	}
 
 	.main__button:hover {
 		opacity: 50%;
 		font-weight: 600;
-	}
-
-	.wrapper {
-		width: 67%;
-		margin: auto;
 	}
 }
 
@@ -181,10 +184,18 @@ body {
 		width: 91%;
 	}
 	.header {
-		margin-bottom: 100px;
+		margin-bottom: 84px;
+	}
+	.menu {
+		padding-right: 2px;
 	}
 	.main {
-		background-size: 60%;
+		background-size: 55%;
+	}
+	.main__title {
+		font: 700 50px/66px pt_serifbold, arial, helvetica, sans-serif;
+		padding-top: 17px;
+		margin-bottom: 39px;
 	}
 }
 
@@ -195,7 +206,6 @@ body {
 	}
 	.menu {
 		display: none;
-		/*position: absolute;*/
 	}
 	.header {
 		margin-bottom: 14px;
